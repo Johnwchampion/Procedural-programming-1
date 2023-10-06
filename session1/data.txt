@@ -1,0 +1,100 @@
+     1	1,Bing Crosby,White Christmas,1942
+     2	2,Bill Haley & his Comets,Rock Around the Clock,1955
+     3	3,Celine Dion,My Heart Will Go On,1998
+     4	4,Sinead O'Connor,Nothing Compares 2 U,1990
+     5	5,The Beatles,Hey Jude,1968
+     6	6,Bryan Adams,(Everything I Do) I Do it For You,1991
+     7	7,Whitney Houston,I Will Always Love You,1992
+     8	8,Pink Floyd,Another Brick in the Wall (part 2),1980
+     9	9,Irene Cara,Flashdance... What a Feeling,1983
+    10	10,Elton John,Candle in the Wind '97,1997
+    11	11,The Rolling Stones,(I Can't Get No) Satisfaction,1965
+    12	12,Coolio,Gangsta's Paradise,1995
+    13	13,Eminem,Lose Yourself,2002
+    14	14,Cher,Believe,1998
+    15	15,Usher,Yeah!,2004
+    16	16,The Beatles,Let it Be,1970
+    17	17,Procol Harum,A Whiter Shade of Pale,1967
+    18	18,Bee Gees,Stayin' Alive,1978
+    19	19,Leona Lewis,Bleeding Love,2008
+    20	20,The Police,Every Breath You Take,1983
+    21	21,Kim Carnes,Bette Davis Eyes,1981
+    22	22,Rihanna & Jay-Z,Umbrella,2007
+    23	23,George Harrison,My Sweet Lord,1971
+    24	24,Abba,Dancing Queen,1976
+    25	25,P Diddy & Faith Evans,I'll Be Missing You,1997
+    26	26,Britney Spears,Baby One More Time,1999
+    27	27,The Beatles,I Want to Hold Your Hand,1964
+    28	28,Michael Jackson,Billie Jean,1983
+    29	29,Bobby Darin,Mack the Knife,1959
+    30	30,John Travolta & Olivia Newton-John,You're the One That I Want,1978
+    31	31,USA For Africa,We Are the World,1985
+    32	32,Hanson,Mmmbop,1997
+    33	33,Madonna,Vogue,1990
+    34	34,Spice Girls,Wannabe,1996
+    35	35,Roy Orbison,Oh Pretty Woman,1964
+    36	36,Eminem,Without Me,2002
+    37	37,The Village People,YMCA,1978
+    38	38,Stevie Wonder,I Just Called to Say I Love You,1984
+    39	39,George Michael,Careless Whisper,1984
+    40	40,John Lennon,Imagine,1971
+    41	41,Survivor,Eye of the Tiger,1982
+    42	42,Los Del Rio,Macarena,1996
+    43	43,Elvis Presley,Are You Lonesome Tonight?,1960
+    44	44,UB40,Can't Help Falling in Love,1993
+    45	45,OutKast,Hey Ya!,2003
+    46	46,Queen,Bohemian Rhapsody,1976
+    47	47,Barbra Streisand,A Woman in Love,1980
+    48	48,Katy Perry,I Kissed A Girl,2008
+    49	49,Judy Garland,Over the Rainbow,1939
+    50	50,Elvis Presley,It's Now Or Never,1960
+    51	51,No Doubt,Don't Speak,1997
+    52	52,Shakira & Wyclef Jean,Hips don't lie,2006
+    53	53,50 Cent,In Da Club,2003
+    54	54,Kylie Minogue,Can't Get You Out of My Head,2001
+    55	55,The Black Eyed Peas,Where is the Love?,2003
+    56	56,The Rolling Stones,Angie,1973
+    57	57,Mungo Jerry,In the Summertime,1970
+    58	58,Vaughn Monroe,(Ghost) Riders in the Sky,1949
+    59	59,Lady GaGa,Poker Face,2009
+    60	60,Ace of Base,The Sign,1994
+    61	61,Carl Douglas,Kung Fu Fighting,1974
+    62	62,Justin Timberlake,Sexyback,2006
+    63	63,Madonna,Hung Up,2005
+    64	64,Elvis Presley,Jailhouse Rock,1957
+    65	65,The Beatles,Help!,1965
+    66	66,Joan Jett & The Blackhearts,I Love Rock 'n' Roll,1982
+    67	67,Ricky Martin,Livin' La Vida Loca,1999
+    68	68,The Monkees,I'm a Believer,1967
+    69	69,Shakira,Whenever Wherever,2002
+    70	70,Rihanna & Calvin Harris,We Found Love,2011
+    71	71,Frank Sinatra,Strangers in the Night,1966
+    72	72,Bruce Springsteen,Streets of Philadelphia,1994
+    73	73,The Righteous Brothers,Unchained Melody,1965
+    74	74,All-4-One,I Swear,1994
+    75	75,Glenn Miller,In the Mood,1940
+    76	76,Lou Bega,Mambo No 5 (A Little Bit of ...),1999
+    77	77,Doris Day,Que sera sera (Whatever will be will be),1956
+    78	78,Flo-Rida & T-Pain,Low,2008
+    79	79,Nat King Cole,Mona Lisa,1950
+    80	80,Terry Jacks,Seasons in the Sun,1974
+    81	81,Culture Club,Karma Chameleon,1983
+    82	82,Aerosmith,I Don't Want to Miss a Thing,1998
+    83	83,Blondie,Heart of Glass,1979
+    84	84,Boyz II Men,End of the Road,1992
+    85	85,The Fugees,Killing Me Softly With His Song,1996
+    86	86,Tony Orlando & Dawn,Tie a Yellow Ribbon 'round the Old Oak Tree,1973
+    87	87,Fergie,Big Girls Don't Cry,2007
+    88	88,Shocking Blue,Venus,1970
+    89	89,Eagles,Hotel California,1977
+    90	90,Bing Crosby,Swinging On a Star,1944
+    91	91,The Beatles,All You Need is Love,1967
+    92	92,Chubby Checker,The Twist,1960
+    93	93,Nelly & Kelly Rowland,Dilemma,2002
+    94	94,The Beatles,She Loves You,1964
+    95	95,Beyonce,Crazy in Love,2003
+    96	96,The Black Eyed Peas,I Gotta Feeling,2009
+    97	97,John Lennon,(Just Like) Starting Over,1980
+    98	98,Culture Club,Do You Really Want to Hurt Me?,1982
+    99	99,Brandy & Monica,The Boy is Mine,1998
+   100	100,Madonna,Like a Prayer,1989
