@@ -59,23 +59,44 @@ else
 return 0;*/
 
 /*Gold1*/
-
-int choices;
-choices = {0,1,2,3,4};
+/*int choices;
+scanf("%d", &choices);
 switch(choices){
-scanf('%d');
     case 0:
         printf("you obtained 0 \n");
+        break;
     case 1:
         printf("you obtained 1 \n");
+        break;
     case 2:
         printf("you obtained 2 \n");
+        break;
     case 3:
         printf("you obtained 3 \n");
+        break;
     case 4:
         printf("you obtained 4 \n");
+        break;
     default:
         printf("out of range \n");
+
 }
 
-    return 0; }
+    return 0;*/
+    
+int value;
+scanf("%d", &value);
+while(value >=0 && value<=100){
+    printf("valid but try again \n");
+    scanf("%d", &value);
+    }
+
+while(value == -1){
+    printf("correct!! \n");
+    break;
+}
+    
+return 0;
+
+    
+}
