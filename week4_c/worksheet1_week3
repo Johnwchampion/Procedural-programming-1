@@ -1,0 +1,12 @@
+
+
+int main (){
+    int n, i;
+    char filename[]= "squares.dat";
+    FILE *file = fopen(filename, "w");
+    scanf("%d", &n);
+    for(i=0; i<=n; i++){
+        printf("%d", i*i);
+
+    } 
+}
