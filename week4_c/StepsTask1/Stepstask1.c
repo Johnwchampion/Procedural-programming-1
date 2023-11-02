@@ -42,41 +42,49 @@ void tokeniseRecord(const char *input, const char *delimiter,
 }
 
 // Complete the main function
+
+
+    
+
 int main() { 
     char *filename = "FitnessData_2023.csv";
     FILE *file = fopen(filename, "r");
     if (file == NULL){
         perror(""); }
         
+    char count[1000];
     int recordcount = 0;
-    char *character;
-    char *fgets(char *character, int n, FILE *stream)
-    do { 
-        fgets(character)
-        if (character == "\n")
-        {recordcount = recordcount + 1; };
-        
-        ;}
-    while(character != NULL);
-    
-    printf("Number of records in file : %d \n", recordcount);
-    fclose(file);
-    return 0; }
 
-/*int line_produce (){
-    char *filename = "FitnessData_2023.csv";
-    FILE *file = fopen(filename, "w");
-    if (file == NULL){
-        perror("");
-    }
-    int buffer_size = 100;
-    char *line_buffer[buffer_size];
-    while (fgets(line_buffer, buffer_size, file) != NULL) 
+    while(fgets(count, 1000, file) != NULL) 
+     {
+        recordcount = recordcount + 1;
+        
+        }
+    fclose(file);  
+    printf("Number of records in file : %d \n", recordcount);
     
-    {fprintf("%c", line_buffer);}
+   
+FILE *file1 = fopen (filename, "r");
+int buffer_size = 100;
+    char line_buffer[buffer_size];
+    int i = 0;
+    int int_steps;
+    while (fgets(line_buffer, buffer_size, file) != NULL) 
+     {
+        char date[11];
+        char time[6];
+        char steps[10];
+        tokeniseRecord(line_buffer, ",",date,time,steps);
+        int_steps = atoi(steps);
+        if(i<3){
+            printf("%s/%s/%d\n ", date,time,int_steps);
+            i++;
+        }
+    }
     
     fclose(file);
-    return 1;*/
+    return 0;
+    }
 
 
 

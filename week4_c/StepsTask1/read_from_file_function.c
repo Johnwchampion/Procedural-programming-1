@@ -22,9 +22,12 @@ int main()
 
     while (fgets(line_buffer, buffer_size, file) != NULL)
     {
-        printf("%s", line_buffer);
+        char date[11];
+        char time[6];
+        char steps[4];
+        printf("%c", line_buffer);
     }
-
+    atoi(char);
     fclose(file);
     return 0;
 }
