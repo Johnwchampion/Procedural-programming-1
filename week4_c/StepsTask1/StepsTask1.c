@@ -9,6 +9,7 @@ typedef struct {
 	int steps;
 } FITNESS_DATA;
 
+
 // Define any additional variables here
 
 
@@ -46,43 +47,35 @@ void tokeniseRecord(const char *input, const char *delimiter,
 
     
 
-int main() { 
+int main() {
+    FITNESS_DATA data[1000];
+
     char *filename = "FitnessData_2023.csv";
     FILE *file = fopen(filename, "r");
     if (file == NULL){
-        perror(""); }
-        
-    char count[1000];
-    int recordcount = 0;
-
-    while(fgets(count, 1000, file) != NULL) 
-     {
-        recordcount = recordcount + 1;
-        
-        }
-    fclose(file);  
-    printf("Number of records in file : %d \n", recordcount);
-    
-   
-FILE *file1 = fopen (filename, "r");
-int buffer_size = 100;
-    char line_buffer[buffer_size];
-    int i = 0;
-    int int_steps;
-    while (fgets(line_buffer, buffer_size, file) != NULL) 
-     {
-        char date[11];
-        char time[6];
-        char steps[10];
-        tokeniseRecord(line_buffer, ",",date,time,steps);
-        int_steps = atoi(steps);
-        if(i<3){
-            printf("%s/%s/%d\n ", date,time,int_steps);
-            i++;
-        }
+        perror("Error in opening file"); 
+        return -1;
     }
     
-    fclose(file);
+    char line_buffer[1024];
+    int recordcount = 0;
+    char steps_string[10];
+    
+    while(fgets(line_buffer, 1024, file) != NULL) 
+    {    
+        FITNESS_DATA row = {};
+        tokeniseRecord(line_buffer, ",", row.date , row.time, steps_string);
+        row.steps = atoi(steps_string);
+        data[recordcount] = row;
+        recordcount++;
+    }
+    fclose(file);  
+    printf("Number of records in file: %d \n", recordcount);
+    
+    for (int i; i < 3; i++){
+        printf("%s/%s/%d\n", data[i].date, data[i].time, data[i].steps);
+    }
+
     return 0;
     }
 
