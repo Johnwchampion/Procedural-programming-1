@@ -1,4 +1,5 @@
 #include "utilities.h"
+#include <string.h>
 
 int main()
 {
@@ -21,7 +22,7 @@ int main()
     int counter = 0;
     float mean = 0;
     float maximum = 0;
-    float lowest= 100;
+    
     while (1)
     {
         FILE *input = fopen(filename, "r");
@@ -71,15 +72,14 @@ int main()
 
         case 'B':
         case 'b':
-            counter = 0;
-            while (fgets(line, buffer_size, input))
-            {
-                // split up the line and store it in the right place
-                // using the & operator to pass in a pointer to the bloodIron so it stores it
-                tokeniseRecord(line, ",", daily_readings[counter].date, &daily_readings[counter].bloodIron);
-                mean += daily_readings[counter].bloodIron;
-                counter++;
+            mean = 0;
+            for(int i = 0; i<counter; i++){
+                mean += daily_readings[i].bloodIron;
+                
+                
             }
+                    
+                
             mean /= counter;
             printf("Your average blood iron was %.2f\n", mean);
             fclose(input);
@@ -87,29 +87,26 @@ int main()
 
         case 'C':
         case 'c':
-            counter = 0;
-            while (fgets(line, buffer_size, input)){
-                tokeniseRecord(line, ",",  daily_readings[counter].date, &daily_readings[counter].bloodIron);
-                if(daily_readings[counter].bloodIron < lowest){
-                    lowest = daily_readings[counter].bloodIron;}
-                counter++;
+            {float lowest= 100;
+                for(int i = 0; i<counter; i++){
+                    if(daily_readings[i].bloodIron < lowest){
+                    lowest = daily_readings[i].bloodIron;}
                 }
-
-        
-                printf("The lowest blood iron value is %.1f \n", lowest);
+                  printf("The lowest blood iron value is %.1f \n", lowest);
+            }
             return 0;
             break;
 
         case 'D':
         case 'd':
-            counter = 0;
-            while (fgets(line, buffer_size, input)){
+            
+            
                 tokeniseRecord(line, ",",  daily_readings[counter].date, &daily_readings[counter].bloodIron);
                 counter++;
                 if(daily_readings[counter].bloodIron < maximum){
                     maximum = daily_readings[counter].bloodIron;
                 }
-                }
+                
             
             printf("The highest blood iron level is %.1f\n ", maximum);
         
@@ -118,6 +115,15 @@ int main()
 
         case 'E':
         case 'e':
+            {char month[100];
+            counter = 0;
+            scanf("%s", month);
+            while(fgets(line, buffer_size, input)){
+                tokeniseRecord(line, ",", daily_readings[counter].date, &daily_readings[counter].bloodIron);
+                counter++;
+                
+
+            }}
             return 0;
             break;
 
