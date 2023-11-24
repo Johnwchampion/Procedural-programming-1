@@ -43,6 +43,12 @@ void tokeniseRecord(const char *input, const char *delimiter,
 // Complete the main function
 int main() {
    
+FITNESS_DATA data[1000];
+char line_buffer[1024];
+int recordcount = 0;
+char steps_string[10];
+char filename[40];
+char choice;
 
         printf("A: Specify the filename to be imported\n");                       
         printf("B: Display the total number of records in the file\n");                    
@@ -52,21 +58,47 @@ int main() {
         printf("F: Find the longest continuous period where the step count is above 500 steps\n"); 
         printf("Q: Exit\n");
 
+choice = getchar();
+while (getchar() != '\n');
+
+
 switch(choice){
     case"A":
     case"a":
-        char *filename = "FitnessData_2023.csv";
+        printf("Input filename : \n");
+        scanf("%s", filename);
         FILE *file = fopen(filename, "r");
-        tokeniseRecord()
+        while(fgets(line_buffer, 1024, file) != NULL) 
+    {    
+        FITNESS_DATA row = {};
+        tokeniseRecord(line_buffer, ",", row.date , row.time, steps_string);
+        row.steps = atoi(steps_string);
+        }
         if (file == NULL){
         perror("Error in opening file");
         }
         break;
     case"B":
     case"b":
+        while(fgets(line_buffer, 1024, file) != NULL){
+        data[recordcount] = row;
+        recordcount++;
+        }
+        printf("Total records: %d", recordcount);
+        
 
     case"C":
     case"b":
+        {float fewest = 100000;
+        int var;
+        for(int i, i<recordcount, i++){
+            if(row[i].steps < fewest){
+                fewest = row[i].steps;
+                var =i;
+            }
+            
+        }}
+        printf("Fewest steps: %s %s", row[var].date, row[var].time);
 
     case"D":
     case"b":
@@ -82,6 +114,7 @@ switch(choice){
 
 
 }
+    return 1;
 }
 
 
