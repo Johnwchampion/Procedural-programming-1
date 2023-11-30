@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "FitnessDataStruct.h"
+#include <math.h>
 
 // Struct moved to header file
 
@@ -43,8 +44,8 @@ void tokeniseRecord(const char *input, const char *delimiter,
 // Complete the main function
 int main() {
    
-FITNESS_DATA data[1000];
-char line_buffer[1024];
+FITNESS_DATA data[1000000];
+char line_buffer[1000];
 int recordcount = 0;
 char steps_string[10];
 char filename[40];
@@ -58,13 +59,15 @@ char choice;
         printf("F: Find the longest continuous period where the step count is above 500 steps\n"); 
         printf("Q: Exit\n");
 
-choice = getchar();
-while (getchar() != '\n');
+
+scanf(" %c", &choice);
 
 
 switch(choice){
-    case"A":
-    case"a":
+
+
+    case 'A':
+    case 'a':
         printf("Input filename : \n");
         scanf("%s", filename);
         FILE *file = fopen(filename, "r");
@@ -73,44 +76,86 @@ switch(choice){
         FITNESS_DATA row = {};
         tokeniseRecord(line_buffer, ",", row.date , row.time, steps_string);
         row.steps = atoi(steps_string);
-        }
-        if (file == NULL){
-        perror("Error in opening file");
-        }
-        break;
-    case"B":
-    case"b":
-        while(fgets(line_buffer, 1024, file) != NULL){
         data[recordcount] = row;
         recordcount++;
         }
+        if (file == NULL){
+        perror("Error in opening file");
+        exit(1);
+        }
+    
+        fclose(file);
+        break;
+
+
+    case 'B':
+    case 'b':
+
         printf("Total records: %d", recordcount);
+
+        break;
         
 
-    case"C":
-    case"b":
-        {float fewest = 100000;
+    case 'C':
+    case 'c':
+        {
+        float fewest = 100000;
         int var;
-        for(int i, i<recordcount, i++){
-            if(row[i].steps < fewest){
-                fewest = row[i].steps;
+        for(int i = 0; i<recordcount; i++){
+            if(data[i].steps < fewest){
+                fewest = data[i].steps;
                 var =i;
             }
             
-        }}
-        printf("Fewest steps: %s %s", row[var].date, row[var].time);
+        }
+        
+        printf("Fewest steps: %s %s", data[var].date, data[var].time);
 
-    case"D":
-    case"b":
+        break;
+        }
+    case 'D':
+    case 'd':
+        {float largest = 0;
+        int var2 = 0;
+        for(int i = 0; i<recordcount; i++){
+            if(data[i].steps > largest){
+                largest = data[i].steps;
+                var2 =i;
+            }
+        }
+        printf("Largest steps: %s %s", data[var2].date, data[var2].time);
 
-    case"E":
-    case"e":
+        break;
+        }
+    case 'E':
+    case 'e':
+        {int TotalSteps = 0;     
+        for(int i = 0; i<recordcount; i++){
+            TotalSteps += data[i].steps;
+         }
+        float meansteps = TotalSteps / recordcount;
+        int roundedmean = round(meansteps);
 
-    case"F":
-    case"f":
+        printf("Mean step count: %d", roundedmean);
 
-    case"Q":
-    case"q":
+
+        break;
+        }
+
+
+    case 'F':
+    case 'f':
+
+        break;
+
+
+    case 'Q':
+    case 'q':
+        {
+            exit(0);
+        }
+
+        break;
 
 
 }
