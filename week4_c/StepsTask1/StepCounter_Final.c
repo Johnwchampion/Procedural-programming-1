@@ -44,14 +44,17 @@ void tokeniseRecord(const char *input, const char *delimiter,
 // Complete the main function
 int main() {
    
-FITNESS_DATA data[1000000];
+FITNESS_DATA data[100000];
 char line_buffer[1000];
 int recordcount = 0;
 char steps_string[10];
 char filename[40];
 char choice;
 
-        printf("A: Specify the filename to be imported\n");                       
+while(1){       
+
+
+        printf("\nA: Specify the filename to be imported\n");                       
         printf("B: Display the total number of records in the file\n");                    
         printf("C: Find date and timeslot with the fewest steps\n");                     
         printf("D: Find date and timeslot with the largest number steps\n");                    
@@ -71,19 +74,20 @@ switch(choice){
         printf("Input filename : \n");
         scanf("%s", filename);
         FILE *file = fopen(filename, "r");
-        while(fgets(line_buffer, 1024, file) != NULL) 
+        while(fgets(line_buffer, 1000, file) != NULL) 
     {    
         FITNESS_DATA row = {};
         tokeniseRecord(line_buffer, ",", row.date , row.time, steps_string);
         row.steps = atoi(steps_string);
         data[recordcount] = row;
         recordcount++;
+
         }
         if (file == NULL){
         perror("Error in opening file");
         exit(1);
         }
-    
+
         fclose(file);
         break;
 
@@ -91,7 +95,7 @@ switch(choice){
     case 'B':
     case 'b':
 
-        printf("Total records: %d", recordcount);
+        printf("Total records: %d \n", recordcount);
 
         break;
         
@@ -146,6 +150,7 @@ switch(choice){
     case 'F':
     case 'f':
 
+
         break;
 
 
@@ -157,8 +162,13 @@ switch(choice){
 
         break;
 
+    default: 
+        printf("Invalid choice \n");
+        
+        break;
 
-}
+
+}}
     return 1;
 }
 
