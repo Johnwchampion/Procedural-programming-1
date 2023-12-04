@@ -150,6 +150,21 @@ switch(choice){
     case 'F':
     case 'f':
 
+    int var3 = 0;
+    
+    for(int i = 0; i<recordcount; i++){
+        while(data[i].steps > 500){
+         
+         var3 = i;
+
+        }}
+    
+    printf("Longest period start: \n", data[var3].date, data[var3].time);
+    printf("Longest period end: \n", data[var3].date, data[var3].time);
+    
+
+    
+
 
         break;
 
@@ -167,11 +182,11 @@ switch(choice){
         
         break;
 
-
-}}
-    return 1;
+    
 }
-
+    return 0;
+}
+}
 
 
 
